@@ -390,10 +390,10 @@ server <- function(input, output, session) {
   })
 
   # --- Render dynamic prior CIs in sidebar ---
-  output$prior_ci_skeptic <- renderText({ paste("=> 原始尺度 95% CI 約: 1 (", format_prior_ci(current_priors$skeptic$mean, current_priors$skeptic$sd)) })
-  output$prior_ci_neutral <- renderText({ paste("=> 原始尺度 95% CI 約: 1 (", format_prior_ci(current_priors$neutral$mean, current_priors$neutral$sd)) })
-  output$prior_ci_optimistic <- renderText({ paste("=> 原始尺度 95% CI 約: 0.8 (", format_prior_ci(current_priors$optimistic$mean, current_priors$optimistic$sd)) })
-  output$prior_ci_pessimistic <- renderText({ paste("=> 原始尺度 95% CI 約: 1.2 (", format_prior_ci(current_priors$pessimistic$mean, current_priors$pessimistic$sd)) })
+  output$prior_ci_skeptic <- renderText({ paste("=> 原始尺度 95% CI 約", format_prior_ci(current_priors$skeptic$mean, current_priors$skeptic$sd)) })
+  output$prior_ci_neutral <- renderText({ paste("=> 原始尺度 95% CI 約", format_prior_ci(current_priors$neutral$mean, current_priors$neutral$sd)) })
+  output$prior_ci_optimistic <- renderText({ paste("=> 原始尺度 95% CI 約", format_prior_ci(current_priors$optimistic$mean, current_priors$optimistic$sd)) })
+  output$prior_ci_pessimistic <- renderText({ paste("=> 原始尺度 95% CI 約", format_prior_ci(current_priors$pessimistic$mean, current_priors$pessimistic$sd)) })
 
   # --- Render dynamic prior descriptions in Background Tab ---
   output$desc_skeptic <- renderUI({
